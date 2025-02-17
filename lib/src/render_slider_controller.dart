@@ -289,7 +289,7 @@ class RenderSliderController extends RenderBox {
     var dx = localPosition.dx.clamp(0.0, size.width);
 
     /// Make the size between 0 and 1 with only 1 decimal and multiply it.
-    var desiredDx = double.parse((dx / size.width).toStringAsFixed(1));
+    var desiredDx = double.parse((dx / size.width).toStringAsFixed(3));
     _value = desiredDx * (_max - _min) + _min;
 
     switch (changeValueType) {
